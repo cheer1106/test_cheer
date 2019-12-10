@@ -59,7 +59,6 @@ class HandleLogger(object):
 
 
 do_log = HandleLogger.handle_logger()
-print('111')
 
 # if __name__ == '__main__':
 #     do_log.debug('debug')

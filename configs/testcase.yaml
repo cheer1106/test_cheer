@@ -1,0 +1,36 @@
+# 存放经常使用，修改不频繁的参数；不需要修改的数据不需要存放配置文件
+# 不能存放动态变化的参数
+excel:
+  data_name: cases_api.xlsx
+  result_col: 8
+  actual_col: 7
+  success_result: 通过
+  fail_result: 未通过
+log:
+  log_name: my_log
+  in_level: DEBUG
+  formater_content: '%(asctime)s - [%(filename)s-->line:%(lineno)d] - %(levelname)s: %(message)s'
+  out_level: INFO
+  log_file: log_api.log
+report:
+  report_name: report
+  report_title: 测试报告
+  report_description: 柠檬班
+  report_tester: cheer
+mysql:
+  host: 'api.lemonban.com'
+  user: 'future'
+  password: '123456'
+  db: 'futureloan'
+  port: 3306
+  select_user_sql: "select * from member where mobile_phone = %s;"
+  select_user_id_sql: "select id from member where mobile_phone = %s;"
+  # "select id from member order by id desc limit 0,1;"
+  select_user_max_id_sql: "select max(id) from member;"
+
+
+api:
+  version: {'X-Lemonban-Media-Type': 'lemonban.v2'}
+  prefix: http://api.lemonban.com/futureloan
+
+
